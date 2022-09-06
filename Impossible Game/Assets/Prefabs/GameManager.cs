@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    
     private bool gameHasEnded = false;
     public float restartdelay = 1f;
 
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("gameover");
             Restart();
             Invoke("Restart", restartdelay);
+            // DontDestroyOnLoad(MusicOn);
         }
     }
 

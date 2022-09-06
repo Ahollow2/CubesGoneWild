@@ -11,6 +11,7 @@ public class playerMovement : MonoBehaviour
     public bool moveRight;
     public bool moveLeft;
     public bool jump;
+     public Vector3 startPos;
 
     // Checking for user input and store inside varables 
     public void Update()
@@ -59,4 +60,9 @@ public class playerMovement : MonoBehaviour
             FindObjectOfType<GameManager>().Endgame();
         }
     }
+
+    void Awake(){
+        startPos = transform.position;
+    }
+    
 }
